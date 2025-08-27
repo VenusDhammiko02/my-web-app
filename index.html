@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            }
+        </style>
+        <title>My First Web App</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="page1" class="visible">
+            <h1>Welcome!</h1>
+
+            <label class="dark-toggle">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span> Dark Mode
+            </label>
+            
+            <input type="text" id="nameInput" placeholder="Enter your name" />
+
+            <div class="button-group">
+                <button id="greetButton" onclick="greetUser()">Greet Me</button>
+                <div id="spinner" class="spinner hidden"></div>
+                <button onclick="clearData()">Clear</button>
+            </div>
+
+            <p id="greetingMessage"></p>
+        </div>
+
+        <div id="page2" class="hidden">
+            <h1>Thanks for visiting!</h1>
+            <p>This is the second page.</p>
+            <button onclick="goBack()">Go Back</button>
+        </div>
+        
+        <script src="script.js" defer></script>
+    </body>
+</html>
